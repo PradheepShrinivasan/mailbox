@@ -16,5 +16,6 @@ before_script:
 # the entire framework is on revel so dependencies
 install:
     - go get github.com/revel/revel
-
+    - go get gopkg.in/mgo.v2/bson
+    - go get gopkg.in/check.v1
     
