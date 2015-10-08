@@ -6,16 +6,17 @@ go:
 # mongodb is used for all testing
 services: mongodb
 
-# the below is to add an artifical wait for mongodb 
-# to start as per travis-ci doc http://docs.travis-ci.com/user/database-setup/
-#
-before_script:
-    - sleep 15
-    - mongo mydb_test --eval 'db.addUser("travis", "test");'
 
 # the entire framework is on revel so dependencies
 install:
     - go get github.com/revel/revel
+    - go get github.com/revel/cmd/revel
+
     - go get gopkg.in/mgo.v2/bson
     - go get gopkg.in/check.v1
-    
+
+# the below is to add an artifical wait for mongodb 
+# to start as per travis-ci doc http://docs.travis-ci.com/user/database-setup/
+before_script:
+    - sleep 15
+    - mongo mydb_test --eval 'db.addUser("travis", "test");'
