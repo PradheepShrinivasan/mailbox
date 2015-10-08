@@ -27,4 +27,4 @@ before_script:
 
 script:
     - PATH="$HOME/gopath/bin:$PATH"
-    - ./script/coverage --coveralls
+    - ./scripts/coverage --coveralls
