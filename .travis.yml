@@ -1,4 +1,6 @@
-languag:
+language: go
+
+go:
   - 1.5
 
 # mongodb is used for all testing
