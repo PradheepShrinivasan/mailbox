@@ -5,4 +5,4 @@
 
 
 
-This is a game mail server written in go
+A game mail server written in Golang
